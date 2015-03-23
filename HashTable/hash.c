@@ -3,7 +3,7 @@
 typedef union key {
     int i;
     double f;
-    char s[MAX_STR_LENGTH];
+    char s[STR_LENGTH];
 } Key;
 
 int hash (Key key, int n) {
@@ -25,7 +25,7 @@ int hash (Key key, int n) {
         }
         return sum % n;
     }
-    return -1;
+    return 0;
 }
 
 int main () {
